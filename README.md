@@ -1,2 +1,2 @@
 # mosaica
-mosaica transfer from GAMS to GAMA (written in GAML langa
+mosaica transfer from GAMS to GAMA (written in GAML language)
