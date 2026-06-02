@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  gama:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+
+    volumes:
+      - ../models:/workspace/models
+      - ../tests:/workspace/tests
+      - ../data:/workspace/data
+      - ../gama_plugins:/workspace/gama_plugins
+
+    working_dir: /workspace
+
+    tty: true

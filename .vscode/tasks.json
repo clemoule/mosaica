@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "🐳 Build Docker",
+      "type": "shell",
+      "command": "docker-compose -f docker/docker-compose.yml build"
+    },
+    {
+      "label": "🚀 Run GAMA (Docker)",
+      "type": "shell",
+      "command": "docker-compose -f docker/docker-compose.yml up"
+    },
+    {
+      "label": "🛑 Stop Docker",
+      "type": "shell",
+      "command": "docker-compose -f docker/docker-compose.yml down"
+    },
+    {
+      "label": "▶ Run Simulation (GAMA)",
+      "type": "shell",
+      "command": "./scripts/run_gama.sh",
+      "group": "build"
+    }
+  ]
+}

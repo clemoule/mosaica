@@ -1,0 +1,19 @@
+{
+  "scopeName": "source.gaml",
+  "patterns": [
+    {
+      "name": "keyword.control.gaml",
+      "match": "\\b(model|species|experiment|global|action|reflex|ask|do|if|else|for|while)\\b"
+    },
+    {
+      "name": "constant.numeric.gaml",
+      "match": "\\b\\d+(\\.\\d+)?\\b"
+    },
+    {
+      "name": "comment.line.gaml",
+      "match": "//.*$"
+    }
+  ],
+  "repository": {},
+  "fileTypes": ["gaml"]
+}

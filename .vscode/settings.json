@@ -1,0 +1,12 @@
+{
+  "files.associations": {
+    "*.gaml": "gaml"
+  },
+
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.formatOnSave": true,
+
+  "workbench.colorTheme": "Default Dark+"
+}

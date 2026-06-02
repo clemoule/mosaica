@@ -1,0 +1,36 @@
+{
+  "GAML Model Base": {
+    "prefix": "gmodel",
+    "body": [
+      "model ${1:name}",
+      "",
+      "global {",
+      "  ${2}",
+      "}",
+      "",
+      "experiment ${3:exp} type: gui {",
+      "}"
+    ],
+    "description": "Base GAML model"
+  },
+
+  "Species": {
+    "prefix": "gspecies",
+    "body": [
+      "species ${1:name} {",
+      "  ${2}",
+      "}"
+    ],
+    "description": "GAML species"
+  },
+
+  "Reflex": {
+    "prefix": "greflex",
+    "body": [
+      "reflex ${1:name} {",
+      "  ${2}",
+      "}"
+    ],
+    "description": "GAML reflex"
+  }
+}
