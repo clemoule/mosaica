@@ -1,2 +1,16 @@
-# mosaica
-mosaica transfer from GAMS to GAMA (written in GAML language)
+# Projet
+MOSAICA
+
+## Objectif
+
+## Structure
+
+## Installation
+
+## Données
+
+## Expériences
+
+## Dépendances
+
+## Références

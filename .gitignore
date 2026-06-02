@@ -1,0 +1,18 @@
+# GAMA
+.metadata/
+
+# Eclipse
+.project
+.classpath
+
+# Python
+__pycache__/
+*.pyc
+
+# Outputs
+outputs/simulations/*
+outputs/logs/*
+
+# OS
+.DS_Store
+Thumbs.db
