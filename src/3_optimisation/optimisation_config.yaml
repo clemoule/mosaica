@@ -1,0 +1,9 @@
+﻿# Configuration for optimisation stage
+inputs:
+  scenario_source: "../../outputs/maelia"
+  data_path: "../../outputs/preprocessing"
+outputs:
+  solution_path: "../../outputs/optimisation"
+settings:
+  algorithm: "multi_objective"
+  max_generations: 100

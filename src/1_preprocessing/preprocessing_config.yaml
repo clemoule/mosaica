@@ -1,0 +1,7 @@
+﻿# Configuration for preprocessing stage
+inputs:
+  raw_data_path: "../../inputs"
+  output_path: "../../outputs/preprocessing"
+settings:
+  crs: "EPSG:4326"
+  cleanup: true

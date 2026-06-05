@@ -9,7 +9,7 @@ services:
     volumes:
       - ../models:/workspace/models
       - ../tests:/workspace/tests
-      - ../data:/workspace/data
+      - ../inputs:/workspace/inputs
       - ../gama_plugins:/workspace/gama_plugins
 
     working_dir: /workspace

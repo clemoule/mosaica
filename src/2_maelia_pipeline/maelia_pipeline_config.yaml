@@ -1,0 +1,8 @@
+﻿# Configuration for MAELIA pipeline stage
+inputs:
+  preprocessing_output: "../../outputs/preprocessing"
+  gama_model_path: "gaml/main.gaml"
+outputs:
+  processed_simulation_path: "../../outputs/maelia"
+settings:
+  run_mode: "simulation"

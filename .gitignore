@@ -1,18 +1,57 @@
-# GAMA
-.metadata/
+# Python & Virtual Environments
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
 
-# Eclipse
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# GAMA & Eclipse
+.metadata/
 .project
 .classpath
 
-# Python
-__pycache__/
-*.pyc
+# Testing
+.pytest_cache/
+htmlcov/
+.coverage
+.coverage.*
+
+# Logs
+logs/
+*.log
 
 # Outputs
 outputs/simulations/*
 outputs/logs/*
 
-# OS
+# Data (ignore large files, keep structure)
+inputs/input/*
+inputs/output/*
+inputs/prepared/*
+!inputs/input/.gitkeep
+!inputs/output/.gitkeep
+!inputs/prepared/.gitkeep
+
+# Environment
+.env
+.env.local
+
+# Generated files
 .DS_Store
-Thumbs.db
+*.swp
+*~

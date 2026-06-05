@@ -1,0 +1,8 @@
+﻿# Configuration for GAMA multi-agent stage
+inputs:
+  model_path: "gaml/main.gaml"
+  environment_path: "gaml/environment"
+outputs:
+  simulation_results: "../.. /outputs/gama_multiagent"
+settings:
+  mode: "multi_agent"
