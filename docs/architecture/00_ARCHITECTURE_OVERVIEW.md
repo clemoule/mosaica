@@ -163,24 +163,24 @@ src/
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                     GIS & Crop Data Sources                       │
-│            (Shapefiles, Rasters, Excel, Databases)               │
+│                     GIS & Crop Data Sources                     │
+│            (Shapefiles, Rasters, Excel, Databases)              │
 └──────────────────────────┬──────────────────────────────────────┘
                            │
                            ▼
         ┌──────────────────────────────────────┐
         │    Python: Preprocessing Module      │
-        │  - Load SIG (geopandas, rasterio)   │
-        │  - Spatial operations (joins, etc)  │
-        │  - Data cleaning                    │
-        │  - Build unified dataset            │
-        │  - Export (CSV, JSON, GeoJSON)      │
+        │  - Load SIG (geopandas, rasterio)    │
+        │  - Spatial operations (joins, etc)   │
+        │  - Data cleaning                     │
+        │  - Build unified dataset             │
+        │  - Export (CSV, JSON, GeoJSON)       │
         └────────────┬─────────────────────────┘
                      │
         ┌────────────▼─────────────────────────┐
         │    Python: Optimization Module       │
         │  - Load dataset                      │
-        │  - Define objectives                │
+        │  - Define objectives                 │
         │  - Setup constraints                 │
         │  - Initialize pymoo solver           │
         └────────────┬─────────────────────────┘
@@ -232,11 +232,11 @@ src/
                      │
                      ▼
         ┌──────────────────────────────────────┐
-        │    Final Results & Outputs            │
-        │  - Interactive dashboards             │
-        │  - PDF reports                        │
-        │  - GIS layers                         │
-        │  - Decision support                   │
+        │    Final Results & Outputs           │
+        │  - Interactive dashboards            │
+        │  - PDF reports                       │
+        │  - GIS layers                        │
+        │  - Decision support                  │
         └──────────────────────────────────────┘
 ```
 

@@ -1,0 +1,71 @@
+﻿# data_sources.yaml
+
+paths: #from root
+  input_folder: "data/1_raw"
+  output_folder: "data/2_parquet"
+  registry_path: "data/3_registry.parquet"
+
+settings:
+  recursive: true
+  export_parquet: true
+
+# Mapping: nom_logique -> chemin du fichier (relatif au data_dir ou absolu)
+
+data_dir: "data/1_raw" # racine optionnelle, peut être surchargée par variable d'env MOSAICA_DATA_DIR
+
+datasets:
+  aide_garantie_prix: Aide_Garantie_Prix_Cult.txt
+  aide_indus: Aide_Indus_Cult.txt
+  aide_replant: Aide_Replant_Cult.txt
+  aide_transport: Aide_Transp_Cult.txt
+  avers: Avers.txt
+  bagasse: Bagasse_Cult.txt
+  bv_2017: BV_2017.set
+  bv_parc_2017: BV_PARC_2017.set
+  cout_recolte: Cout_Recolte_Cult.txt
+  cout_transport: Cout_Transp_Cult.txt
+  cout_transport_lam: Cout_Transp_Cult_LAM.txt
+  cpt_2017: CPT_2017.set
+  cpt_parc_2017: CPT_PARC_2017.set
+  cultiv_2017: CULTIV_2017.set
+  cult_2017: CULT_2017.set
+  cult_non_nc_2017: CULT_NON_NC_2017.set
+  data_cult: Data_Cult.txt
+  data_otk: Data_OTK.txt
+  data_parc_gwad_2017: Data_Parc_Gwad_2017.txt
+  data_rpg_gwad_2017: Data_RPG_Gwad_2017.txt
+  data_sol: Data_Sol.txt
+  duree_cycle: Duree_Cycle_Cult.txt
+  duree_plant: Duree_Plant_Cult.txt
+  expl_nbt: EXPL_NBT.set
+  expl_parc_2017: EXPL_PARC_2017.set
+  mae_compost_restit: MAE_Compost_Cult_RESTIT.txt
+  mae_compost_smart: MAE_Compost_Cult_SMART.txt
+  mae_jachere_sol_nu: MAE_Jachere_Sol_Nu_Cult.txt
+  mae_recolte_vert: MAE_Recolte_Vert_Cult.txt
+  matrice_otk_restit: Matrice_OTK_Cult_RESTIT.txt
+  matrice_otk_smart: Matrice_OTK_Cult_SMART.txt
+  mb_add: MB_ADD_Cult.txt
+  nonbois_2017: NONBOIS_2017.set
+  nutri_alim: Nutri_Alim.txt
+  nutri_cult: Nutri_Cult.txt
+  otk: OTK.set
+  parc_nbt: PARC_NBT.set
+  posei_q: POSEI_Q_Cult.txt
+  posei_surf: POSEI_Surf_Cult.txt
+  prix_cult: Prix_Cult.txt
+  prix_cult_cf_restit: Prix_Cult_CF_RESTIT.txt
+  prix_cult_cf_smart: Prix_Cult_CF_SMART.txt
+  rdt_cult: Rdt_Cult.txt
+  rdt_cult_cf_restit: Rdt_Cult_CF_RESTIT.txt
+  rdt_cult_cf_smart: Rdt_Cult_CF_SMART.txt
+  rdt_cult_init: Rdt_Cult_INIT.txt
+  reg_parc_2017: REG_PARC_2017.set
+  rs_cult: RS_Cult.txt
+  r_tixier: R_Tixier.txt
+  sol: SOL.set
+  var_c: VAR_C.set
+  var_otk: VAR_OTK.set
+  var_parc_2017: VAR_PARC_2017.set
+  var_rdt_cult: Var_Rdt_Cult.txt
+  var_sol: VAR_SOL.set
