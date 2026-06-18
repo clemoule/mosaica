@@ -1,0 +1,67 @@
+parameters:
+  scalars:
+    PROP_CF: 0.3
+    COEFF_C_CO2: 0.272
+    PROP_BA_JA: 0.2
+    MIN_CS_GFA: 0.6
+    MAX_AGRO_AN: 0.75
+    MAX_AGRO_IG: 0.66
+
+    QUOTA_BA_MAX: 77877
+    QUOTA_ME_MAX: 80000
+    QUOTA_AN_MAX: 70000
+    QUOTA_IG_MAX: 50000
+    QUOTA_BC_MAX: 40000
+    QUOTA_SUCRE_MAX: 107000
+
+    QUOTA_BC_MIN: 4056
+    QUOTA_IG_MIN: 5125
+    QUOTA_MA_MIN: 26404
+    QUOTA_AN_MIN: 2322
+    QUOTA_PLU_MIN: 5879
+    QUOTA_ME_MIN: 4135
+    QUOTA_PN_PIQ_MIN: 6096
+
+    QUOTA_LEG: 63059
+    QUOTA_TUB: 0
+    QUOTA_FRU: 30789
+    QUOTA_PAT: 12193
+
+    AN_SURF_EXPL_MIN: 10
+    RDT_INDUS_SUCRE: 0.9
+
+  indexed_scalars:
+    PART_PLUVIO:
+      index: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+      values:
+        1: 0.0743
+        2: 0.0378
+        3: 0.0464
+        4: 0.0906
+        5: 0.1034
+        6: 0.0681
+        7: 0.0816
+        8: 0.1135
+        9: 0.0957
+        10: 0.1169
+        11: 0.0986
+        12: 0.0731
+
+  tables:
+    Data_RPG_Gwad:
+      file: TABLE/Data_RPG_Gwad_2017.txt
+
+    Data_Parc_Gwad:
+      file: TABLE/Data_Parc_Gwad_2017.txt
+
+    Data_Cult:
+      file: TABLE/Data_Cult.txt
+
+    Data_OTK:
+      file: TABLE/Data_OTK.txt
+
+    Data_Sol:
+      file: TABLE/Data_Sol.txt
+
+    Matrice_OTK_Cult:
+      file: TABLE/Matrice_OTK_Cult_RESTIT.txt

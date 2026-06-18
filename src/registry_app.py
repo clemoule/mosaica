@@ -1,18 +1,19 @@
 import streamlit as st
 import pandas as pd
 
-from preprocessing.config_loader import load_config
+from shared.config_loader import load_config
 from preprocessing.dataset_builder import build_datasets, export_parquet
-
+from preprocessing.compute_parameters import build_features
 
 # =========================
 # CONFIG + DATA LOAD
 # =========================
 st.set_page_config(layout="wide")
 
-cfg = load_config()
+cfg = load_config("preprocessing_config.yaml")
 loaded, registry = build_datasets(cfg)
-
+exp_cfg = load_config("experiment_config.yaml")
+#features = build_features(loaded_temp, exp_cfg)
 
 # =========================
 # SIDEBAR GLOBAL INFO

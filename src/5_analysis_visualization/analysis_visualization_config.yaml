@@ -1,8 +1,0 @@
-﻿# Configuration for analysis and visualization stage
-inputs:
-  optimisation_results: "../../outputs/optimisation"
-  multiagent_results: "../../outputs/gama_multiagent"
-outputs:
-  reports_path: "../../outputs/reports"
-settings:
-  charts: ["pareto", "maps", "comparisons"]

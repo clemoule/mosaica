@@ -1,0 +1,76 @@
+constraints:
+  Eq_SURF_MAX_Parc:
+    enable: true
+
+  Eq_SURF_INIT_Parc:
+    enable: true
+
+  Eq_NOCULT_NC:
+    enable: true
+
+  Eq_AN_SOL_Parc:
+    enable: true
+
+  Eq_ME_SOL_Parc:
+    enable: true
+
+  Eq_SURF_MIN_Parc:
+    enable: true
+
+  Eq_ALTIMIN_Parc:
+    enable: true
+
+  Eq_ALTIMAX_Parc:
+    enable: true
+
+  Eq_PENTEMIN_Parc:
+    enable: true
+
+  Eq_PENTEMAX_Parc:
+    enable: true
+
+  Eq_PLUVIOMIN_Parc:
+    enable: true
+
+  Eq_PLUVIOMAX_Parc:
+    enable: true
+
+  Eq_ME_IRR:
+    enable: true
+
+  Eq_ME_MG:
+    enable: true
+
+  Eq_IG_PLA_ILE:
+    enable: true
+
+  Eq_IG_TUT_ILE:
+    enable: true
+
+  Eq_IG_CLD:
+    enable: true
+
+  Eq_CS_CONFORM:
+    enable: true
+    args:
+      CS_CONFORM_MAX: 1500
+
+  Eq_BA_IRR:
+    enable: true
+
+  Eq_BA_JA:
+    enable: true
+    args:
+      PROP_BA_JA: 0.2
+
+  Eq_REV:
+    enable: true
+
+  Eq_REV_MARKOVITZ:
+    enable: true
+
+  Eq_BA_QUOTA_MAX:
+    enable: true
+
+  Eq_AN_QUOTA_MAX:
+    enable: true

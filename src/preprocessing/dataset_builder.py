@@ -2,7 +2,7 @@
 import pandas as pd
 from pathlib import Path
 from preprocessing.data_loader import load_file
-from preprocessing.config_loader import resolve_file
+from shared.config_loader import resolve_file
 
 
 def build_datasets(cfg):

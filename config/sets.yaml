@@ -1,0 +1,209 @@
+sets:
+  # =========================================================
+  # BASE SETS
+  # =========================================================
+
+  R:
+    type: range
+    start: R0
+    end: R27
+
+  E:
+    type: range
+    start: E1
+    end: E4638
+
+  P:
+    type: range
+    start: P1
+    end: P24734
+
+  H:
+    type: list
+    values: [init, calib, "2017:2022"]
+
+  K:
+    type: include
+    file: SET/OTK.set
+
+  T:
+    type: range
+    start: T0
+    end: T8
+
+  C:
+    type: include
+    file: SET/cult_2017.set
+
+  S:
+    type: include
+    file: SET/sol.set
+
+  BV:
+    type: include
+    file: SET/BV_2017.set
+
+  CPT:
+    type: include
+    file: SET/CPT_2017.set
+
+  # =========================================================
+  # RELATIONS (EQUIVALENT GAMS $include relations)
+  # =========================================================
+
+relations:
+  EXPL_PARC:
+    dims: [E, P]
+    file: SET/EXPL_PARC_2017.set
+
+  REG_PARC:
+    dims: [R, P]
+    file: SET/REG_PARC_2017.set
+
+  BV_PARC:
+    dims: [BV, P]
+    file: SET/BV_PARC_2017.set
+
+  CPT_PARC:
+    dims: [CPT, P]
+    file: SET/CPT_PARC_2017.set
+
+  # =========================================================
+  # SUBSETS / SET ALGEBRA (NOUVEAU DSL)
+  # =========================================================
+
+subsets:
+  # -------- identity subsets --------
+  SR:
+    base: R
+    expr: identity
+
+  SE:
+    base: E
+    expr: identity
+
+  SP:
+    base: P
+    expr: identity
+
+  SK:
+    base: K
+    expr: identity
+
+  SC:
+    base: C
+    expr: identity
+
+  SS:
+    base: S
+    expr: identity
+
+  SBV:
+    base: BV
+    expr: identity
+
+  # -------- explicit subsets --------
+
+  SC_AN:
+    base: C
+    values: [AN, AN_NU, AN_PA]
+
+  SC_ME:
+    base: C
+    values: [ME]
+
+  # -------- union DSL --------
+
+  SC_CS_IRRIG:
+    base: C
+    expr: union
+    sets:
+      - CS_BT_IM
+      - CS_SBT_IM
+      - CS_NGT_IM
+      - CS_CGT_IM
+      - CS_EGT_IM
+      - CS_MG_IM
+
+  SC_CS_MECA:
+    base: C
+    expr: union
+    sets:
+      - CS_BT_NIM
+      - CS_BT_IM
+      - CS_SBT_NIM
+      - CS_SBT_IM
+      - CS_NGT_NIM
+      - CS_NGT_IM
+      - CS_CGT_NIM
+      - CS_CGT_IM
+      - CS_EGT_NIM
+      - CS_EGT_IM
+      - CS_MG_NIM
+      - CS_MG_IM
+
+  # -------- complement DSL --------
+
+  ST_NON_T2:
+    base: T
+    expr: exclude
+    exclude: [T2]
+
+  # -------- hierarchical grouping --------
+
+  SC_CAN:
+    base: C
+    expr: union
+    sets:
+      - CF_NBT_NISM
+      - CF_NBT_NIM
+      - CF_SBT_NISM
+      - CF_SBT_NIM
+      - CF_NGT_NISM
+      - CF_NGT_NIM
+      - CF_CGT_NISM
+      - CF_CGT_NIM
+      - CF_EGT_NISM
+      - CF_EGT_NIM
+      - CS
+      - CS_BT_NISM
+      - CS_BT_NIM
+      - CS_BT_IM
+      - CS_SBT_NISM
+      - CS_SBT_NIM
+      - CS_SBT_IM
+      - CS_NGT_NISM
+      - CS_NGT_NIM
+      - CS_NGT_IM
+      - CS_CGT_NISM
+      - CS_CGT_NIM
+      - CS_CGT_IM
+      - CS_EGT_NISM
+      - CS_EGT_NIM
+      - CS_EGT_IM
+      - CS_MG_NISM
+      - CS_MG_NIM
+      - CS_MG_IM
+
+  # -------- full sets --------
+
+  SC_TOT:
+    base: C
+    expr: identity
+
+# =========================================================
+# OPTIONAL: VARIABLES (just tracking, pas logique Pyomo ici)
+# =========================================================
+
+variables:
+  VAR_P:
+    file: SET/var_parc_2017.set
+
+  VAR_OTK:
+    file: SET/var_otk.set
+
+  VAR_C:
+    file: SET/var_c.set
+
+  VAR_SOL:
+    file: SET/var_sol.set
