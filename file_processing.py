@@ -1,6 +1,7 @@
 import pandas as pd
 import re
 
+
 def parse_blocks(file_path):
     data = []
 
@@ -11,7 +12,6 @@ def parse_blocks(file_path):
     years = []
 
     for line in lines:
-
         # Header colonne
         if line.startswith("ident"):
             parts = line.split()
@@ -26,14 +26,16 @@ def parse_blocks(file_path):
         values = parts[3:]
 
         for i, y in enumerate(years):
-            data.append({
-                "aide": "garantie",
-                "ident": ident,
-                "annee": int(y),
-                "init": init,
-                "calib": calib,
-                "valeur": float(values[i])
-            })
+            data.append(
+                {
+                    "aide": "garantie",
+                    "ident": ident,
+                    "annee": int(y),
+                    "init": init,
+                    "calib": calib,
+                    "valeur": float(values[i]),
+                }
+            )
 
     return pd.DataFrame(data)
 

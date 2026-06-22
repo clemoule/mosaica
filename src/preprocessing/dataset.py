@@ -1,8 +1,8 @@
 # dataset.py
 from torch.utils.data import Dataset
 
-class MosaicDataset(Dataset):
 
+class MosaicDataset(Dataset):
     def __init__(self, features: dict):
         self.features = features
         self.keys = list(features.keys())

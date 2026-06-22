@@ -4,7 +4,6 @@ from pyomo.environ import Set
 
 
 class SetEngine:
-
     def __init__(self, path):
         with open(path, "r", encoding="utf-8") as f:
             cfg = yaml.safe_load(f)
@@ -84,7 +83,7 @@ class SetEngine:
         for name, spec in self.relations.items():
             self.relations[name] = {
                 "dims": spec["dims"],
-                "data": self._relation(spec["file"])
+                "data": self._relation(spec["file"]),
             }
 
     # =========================================================

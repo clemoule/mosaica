@@ -4,7 +4,6 @@ from pyomo.environ import Param, Set
 
 
 class ParameterBuilder:
-
     def __init__(self, config_path: str):
         with open(config_path, "r") as f:
             self.cfg = yaml.safe_load(f)["parameters"]
@@ -26,11 +25,7 @@ class ParameterBuilder:
     def _add_scalars(self, model):
 
         for name, value in self.cfg.get("scalars", {}).items():
-            setattr(
-                model,
-                name,
-                Param(initialize=value, mutable=True)
-            )
+            setattr(model, name, Param(initialize=value, mutable=True))
 
     # ------------------------------------------------
     # 2. INDEXED SCALARS (ex: PART_PLUVIO(mois))
@@ -38,7 +33,6 @@ class ParameterBuilder:
     def _add_indexed_scalars(self, model):
 
         for name, obj in self.cfg.get("indexed_scalars", {}).items():
-
             idx = obj["index"]
             values = obj["values"]
 
@@ -50,11 +44,7 @@ class ParameterBuilder:
             setattr(
                 model,
                 name,
-                Param(
-                    getattr(model, f"{name}_SET"),
-                    initialize=rule,
-                    mutable=False
-                )
+                Param(getattr(model, f"{name}_SET"), initialize=rule, mutable=False),
             )
 
     # ------------------------------------------------
@@ -63,7 +53,6 @@ class ParameterBuilder:
     def _add_tables(self, model):
 
         for name, obj in self.cfg.get("tables", {}).items():
-
             path = obj["file"]
             df = self._load_table(path)
 
@@ -83,8 +72,8 @@ class ParameterBuilder:
                     getattr(model, f"{name}_R"),
                     getattr(model, f"{name}_C"),
                     initialize=rule,
-                    mutable=False
-                )
+                    mutable=False,
+                ),
             )
 
     # ------------------------------------------------

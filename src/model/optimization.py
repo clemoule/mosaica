@@ -5,6 +5,7 @@ from model.variables import obj_rule
 from src.model.constraints import one_crop_per_parcel
 from model.variables import obj_rule
 
+
 def build_model(features):
     m = pyo.ConcreteModel()
 
@@ -25,6 +26,5 @@ def build_model(features):
     m.obj = pyo.Objective(rule=obj_rule, sense=pyo.maximize)
 
     m.cons = pyo.Constraint(m.P, rule=one_crop_per_parcel)
-
 
     return m

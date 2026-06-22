@@ -11,9 +11,7 @@ from model.constraint_registry import CONSTRAINT_REGISTRY
 
 model = ConcreteModel()
 
-config = load_yaml_config(
-    "config/constraints.yaml"
-)
+config = load_yaml_config("config/constraints.yaml")
 
 # ============================================================
 # SETS
@@ -43,22 +41,16 @@ create_variables(model)
 # ============================================================
 
 for _, constraint_builder in CONSTRAINT_REGISTRY.items():
-
-    constraint_builder(
-        model=model,
-        config=config
-    )
+    constraint_builder(model=model, config=config)
 
 # ============================================================
 # OBJECTIVE
 # ============================================================
+
 
 def objective_rule(model):
 
     return model.total_markowitz_revenue
 
 
-model.objective = Objective(
-    rule=objective_rule,
-    sense=maximize
-)
+model.objective = Objective(rule=objective_rule, sense=maximize)

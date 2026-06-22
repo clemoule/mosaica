@@ -5,6 +5,7 @@ from pathlib import Path
 # ROOT DU PROJET
 # =========================================================
 
+
 def get_project_root(marker: str = ".git") -> Path:
     """
     Remonte l'arborescence jusqu'à trouver la racine du projet.

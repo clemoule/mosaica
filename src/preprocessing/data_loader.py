@@ -28,34 +28,22 @@ def load_file(path: Path) -> pd.DataFrame:
     # TXT / SET
     # =========================
     if suffix in [".txt", ".set"]:
-
         attempts = [
-
             # séparateur auto
             dict(sep=None, engine="python"),
-
             # espaces multiples
             dict(sep=r"\s+", engine="python"),
-
             # tabulations
             dict(sep="\t", engine="python"),
-
             # point-virgule
             dict(sep=";", engine="python"),
-
             # virgule
             dict(sep=",", engine="python"),
-
             # ultra permissif
-            dict(
-                sep=r"\s+",
-                engine="python",
-                on_bad_lines="skip"
-            ),
+            dict(sep=r"\s+", engine="python", on_bad_lines="skip"),
         ]
 
         for params in attempts:
-
             df = try_read(path, **params)
 
             if df is not None and len(df.columns) > 0:

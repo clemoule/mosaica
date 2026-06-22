@@ -18,7 +18,6 @@ def build_model(data, config_path):
     model.constraints = ConstraintList()
 
     for cname, cdef in config["constraints"].items():
-
         if not cdef.get("enable", False):
             continue
 
