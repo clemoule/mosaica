@@ -15,37 +15,23 @@ def load_file(path: Path) -> pd.DataFrame:
 
     suffix = path.suffix.lower()
 
-    # =========================
-    # CSV
-    # =========================
     if suffix == ".csv":
         df = try_read(path)
-
         if df is not None:
             return df
 
-    # =========================
-    # TXT / SET
-    # =========================
     if suffix in [".txt", ".set"]:
         attempts = [
-            # séparateur auto
-            dict(sep=None, engine="python"),
-            # espaces multiples
-            dict(sep=r"\s+", engine="python"),
-            # tabulations
-            dict(sep="\t", engine="python"),
-            # point-virgule
-            dict(sep=";", engine="python"),
-            # virgule
-            dict(sep=",", engine="python"),
-            # ultra permissif
-            dict(sep=r"\s+", engine="python", on_bad_lines="skip"),
+            dict(sep=None, engine="python"), # séparateur auto
+            dict(sep=r"\s+", engine="python"), # espaces multiples
+            dict(sep="\t", engine="python"), # tabulations
+            dict(sep=";", engine="python"), # point-virgule
+            dict(sep=",", engine="python"), # virgule
+            dict(sep=r"\s+", engine="python", on_bad_lines="skip"), # ultra permissif
         ]
 
         for params in attempts:
             df = try_read(path, **params)
-
             if df is not None and len(df.columns) > 0:
                 return df
 
