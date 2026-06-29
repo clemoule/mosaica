@@ -2,9 +2,6 @@
 
 import pytest
 from pathlib import Path
-import tempfile
-import json
-import pandas as pd
 
 from mosaica.utils import (
     resolve_path,

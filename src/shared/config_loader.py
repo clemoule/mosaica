@@ -1,7 +1,6 @@
 # config_loader.py
 import yaml
 from pathlib import Path
-import os
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 

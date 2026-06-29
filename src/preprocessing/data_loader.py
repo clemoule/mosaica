@@ -22,12 +22,12 @@ def load_file(path: Path) -> pd.DataFrame:
 
     if suffix in [".txt", ".set"]:
         attempts = [
-            dict(sep=None, engine="python"), # séparateur auto
-            dict(sep=r"\s+", engine="python"), # espaces multiples
-            dict(sep="\t", engine="python"), # tabulations
-            dict(sep=";", engine="python"), # point-virgule
-            dict(sep=",", engine="python"), # virgule
-            dict(sep=r"\s+", engine="python", on_bad_lines="skip"), # ultra permissif
+            dict(sep=None, engine="python"),  # séparateur auto
+            dict(sep=r"\s+", engine="python"),  # espaces multiples
+            dict(sep="\t", engine="python"),  # tabulations
+            dict(sep=";", engine="python"),  # point-virgule
+            dict(sep=",", engine="python"),  # virgule
+            dict(sep=r"\s+", engine="python", on_bad_lines="skip"),  # ultra permissif
         ]
 
         for params in attempts:

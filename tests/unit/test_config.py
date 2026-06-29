@@ -1,8 +1,6 @@
 """Unit tests for Config module."""
 
 import pytest
-from pathlib import Path
-import tempfile
 import yaml
 
 from mosaica.config import Config

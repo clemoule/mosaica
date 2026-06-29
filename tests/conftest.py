@@ -5,7 +5,7 @@ from pathlib import Path
 import tempfile
 import pandas as pd
 import geopandas as gpd
-from shapely.geometry import Point, Polygon
+from shapely.geometry import Polygon
 
 
 @pytest.fixture

@@ -3,7 +3,6 @@
 import pyomo.environ as pyo
 from model.variables import obj_rule
 from src.model.constraints import one_crop_per_parcel
-from model.variables import obj_rule
 
 
 def build_model(features):
